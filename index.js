@@ -21,12 +21,12 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
-  //   socket.emit('message', { lee: 'hey how are you?' });
-  //   socket.on('another event', (data) => {
-  //     console.log(data);
-  //   });
+  socket.emit('message', { lee: 'hey how are you?' });
+  socket.on('another event', (data) => {
+    console.log(data);
+  });
   //   socket.emit('greetings', 'Hey!', { ms: 'jane' }, Buffer.from([4, 3, 3, 1]));
-  //   socket.on('salutations', (elem1, elem2, elem3) => {
-  //     console.log(elem1, elem2, elem3);
-  //   });
+  socket.on('salutations', (elem1, elem2, elem3) => {
+    console.log(elem1, elem2, elem3);
+  });
 });
